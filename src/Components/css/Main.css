@@ -1,0 +1,205 @@
+.cover_pic {
+  height: 90vh;
+  width: 98.9vw;
+  object-fit: cover;
+  filter: grayscale(50%);
+}
+
+.welcome_relative {
+  position: relative;
+}
+.welcome_absolute {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 25%;
+  text-align: left;
+}
+
+.search_bar {
+  padding: 15px 25px;
+  border: none;
+  width: 50vw;
+  border-radius: 5px;
+  position: relative;
+}
+.gallery_Padding {
+  padding: 50px 100px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.info_card_position {
+  position: absolute;
+  color: white;
+  bottom: 1%;
+  left: 5%;
+  width: 100%;
+
+  text-align: left;
+}
+.gallery_pics:hover {
+  filter: brightness(50%) !important;
+}
+
+.title_text {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.desc_text {
+  font-size: 20px;
+  line-height: 15px;
+}
+
+::placeholder {
+  font-size: 15px;
+  padding-left: 25px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav_search {
+  width: 45vw !important;
+  border-radius: 20px !important;
+  border: none !important;
+  background-color: #e8e8e8 !important;
+}
+
+.nav_relative {
+  position: relative;
+}
+
+.search_icon_nav {
+  position: absolute;
+  top: 4px;
+  left: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: gray;
+}
+
+.nav_bar_padding {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.explore_oveflow {
+  overflow-x: auto;
+
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background: transparent;
+}
+
+.explorer_btn {
+  border: none;
+  background-color: transparent;
+  margin: 5px 15px;
+}
+
+.margin_zero {
+  margin: 0px;
+  padding: 0px;
+  width: 98.9vw;
+}
+
+.profile_pic {
+  border-radius: 50% !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.card_user_image {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+.download_btn {
+  right: 10px;
+  font-size: 20px;
+}
+
+.nav_text {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+/* 320px.
+480px.
+600px.
+768px.
+900px.
+1024px.
+1200px. */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .gallery_Padding {
+    padding: 5px 5px;
+  }
+  .welcome_absolute {
+    left: 0px;
+    top: 40%;
+  }
+  .cover_pic {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .gallery_Padding {
+    padding: 5px 5px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .gallery_Padding {
+    padding: 5px 5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .gallery_Padding {
+    padding: 5px 5px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .gallery_Padding {
+    padding: 5px 5px;
+  }
+  .nav_search {
+    width: 30vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav_search {
+    width: 60vw !important;
+  }
+  .nav_text {
+    font-size: 13px !important;
+  }
+  .nav_search {
+    width: 52vw !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .nav_search {
+    width: 60vw !important;
+  }
+
+  .nav_text {
+    font-size: 15px !important;
+  }
+}
