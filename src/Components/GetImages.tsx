@@ -7,8 +7,27 @@ import Col from "react-bootstrap/Col";
 import { AiOutlineDownload } from "react-icons/ai";
 import { saveAs } from "file-saver";
 
-const GetImages = (props) => {
-  const downloadImage = (e, image) => {
+ 
+type dataProps ={
+
+ 
+  fetchImages:()=> void
+  hasMore:boolean
+  images:{
+    urls:{regular:string}
+    user:{
+      first_name:string
+      profile_image:{
+        medium:string
+      }
+    }
+  }[]
+}
+
+
+const GetImages = (props:dataProps) => {
+
+  const downloadImage = (e:React.MouseEvent<Element, MouseEvent>, image:string) => {
     e.preventDefault();
     saveAs(image, `${image}.jpg`);
   };

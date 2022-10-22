@@ -13,21 +13,23 @@ const MainPage = () => {
   const fetchUrl = `https://api.unsplash.com/search/photos?client_id=${process.env.REACT_APP_UNSPLASH_KEY_API}&query=${query}&page=${page}`;
 
   const fetchImages = () => {
+
     axios
       .get(fetchUrl, {
         headers: {},
       })
       .then((response) => {
-        setData([...data, ...response.data.results]);
+        setData(response.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
     setPage(page + 1);
   };
-  const searchImages = (e) => {
-    if (e.keyCode === 13) {
-      setQuery(e.target.value);
+  const searchImages = (e:React.KeyboardEvent<HTMLInputElement>) => {
+
+    if (e.key === 'Enter') {
+      setQuery((e.target as HTMLInputElement).value);
       setData([]);
     }
   };

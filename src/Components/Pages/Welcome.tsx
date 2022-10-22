@@ -2,7 +2,25 @@ import React, { useEffect, useState } from "react";
 import coverpic from "../Images/coverpic.jpg";
 import GetImages from "../GetImages";
 
-const Welcome = (props) => {
+type MainData ={
+ searchImages:()=>void
+  fetchImages:()=> void
+  hasMore:boolean
+  data:{
+    urls:{regular:string}
+    user:{
+      first_name:string
+      profile_image:{
+        medium:string
+      }
+    }
+  }[]
+}
+
+const Welcome = (props:MainData) => {
+
+  
+
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
@@ -36,6 +54,7 @@ const Welcome = (props) => {
               className="search_bar"
               placeholder="search free high-resolution photos"
               onKeyDown={props.searchImages}
+              
             ></input>
           ) : (
             <></>

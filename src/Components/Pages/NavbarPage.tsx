@@ -8,7 +8,7 @@ import profile from "../Images/profile.jpg";
 
 import { AiOutlineSearch } from "react-icons/ai";
 
-const NavbarPage = (props) => {
+const NavbarPage = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="nav_bar_padding">
